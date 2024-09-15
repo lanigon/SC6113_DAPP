@@ -233,6 +233,7 @@
 		"type": "function"
 	}
 ]       
+        const web3 = new Web3(Web3.givenProvider);
         const contract = new web3.eth.Contract(contractABI, contractAddress);
 
         async function storeValue() {

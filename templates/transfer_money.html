@@ -240,6 +240,7 @@
 		"type": "function"
 	}
 ]        
+        const web3 = new Web3(Web3.givenProvider);
         const contract = new web3.eth.Contract(contract_abi,contract_address);
         console.log(contract);
 
