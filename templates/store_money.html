@@ -245,7 +245,8 @@
         }
 
         async function getValue() {
-            const storedValue = await contract.methods.getBalance().call();
+            const accounts = await web3.eth.requestAccounts();
+            const storedValue = await contract.methods.getBalance().call({ from: accounts[0] });
             console.log("stored value " + storedValue);
             document.getElementById('storedValue').innerText = "Stored Value: " + storedValue;
         }
